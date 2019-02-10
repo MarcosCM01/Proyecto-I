@@ -21,10 +21,13 @@ namespace Estructuras_Lineales
                 Cabeza.Valor = Valor;
                 Tamaño++;
             }
-            else
-            {
-                //falta agregar 
-            }
+           else //De lo contrario, el nuevo se convierte en la cabeza
+           {
+               Nuevo = new Nodo<T>(valor);
+               Nuevo.siguiente = Cabeza;
+               Cabeza.anterior = Nuevo;
+               Cabeza = Nuevo;
+           } 
         }
     }
 }
