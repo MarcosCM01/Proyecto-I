@@ -29,6 +29,46 @@ namespace Estructuras_Lineales
                Cabeza = Nuevo;
            } 
         }
+        
+        public void Eliminar (T valor)
+        {
+            if (Cabeza.siguiente != null)
+            {
+                Cabeza.siguiente = Cabeza;
+                Cabeza.anterior = NULL;
+            }
+            else
+            {
+                //Indicar que la pila esta vacia
+            }
+        }
+        
+        public void Buscar(T valor)
+        {
+            Buscado = new Nodo<T>(valor);
+            Recorrido = new Nodo<T>(valor);
+            Recorrido = cabeza; //Este nodo sera el que sirva para recorrer la pila
+            //Pedir al usuario que ingrese a quien buscara y almacenarlo en el nodo
+            if (Cabeza.siguiente != null)
+            {
+                if (Buscado == Cabeza)
+                {
+                //Se encontro al que buscaba
+                }
+                else
+                {
+                    while (Recorrido.siguiente != Buscado)
+                    {
+                        //Moverlo de posicion en la pila
+                    }
+                }
+            }
+            else 
+            {
+                //Indicar que la lista esta vacia
+            }
+            
+        }
     }
 }
 
